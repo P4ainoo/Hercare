@@ -1,0 +1,6 @@
+{
+  "name": "HerCare",
+  "description": "A calm well-being companion and safe sanctuary designed with care for students and graduates in Tunisia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

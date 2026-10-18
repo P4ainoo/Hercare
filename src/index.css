@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-label: "Plus Jakarta Sans", sans-serif;
+
+  --color-background: var(--theme-bg, #fdf9f5);
+  --color-surface: var(--theme-surface, #fdf9f5);
+  --color-surface-dim: #ddd9d6;
+  --color-surface-bright: #fdf9f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f7f3ef;
+  --color-surface-container: #f1ede9;
+  --color-surface-container-high: #ebe7e4;
+  --color-surface-container-highest: #e5e2de;
+  --color-on-surface: #1c1c19;
+  --color-on-surface-variant: #494551;
+  --color-inverse-surface: #31302e;
+  --color-inverse-on-surface: #f4f0ec;
+  --color-outline: #7a7582;
+  --color-outline-variant: #cbc4d2;
+
+  --color-primary: var(--theme-primary, #684fa7);
+  --color-primary-container: var(--theme-primary-container, #a58be8);
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: var(--theme-on-primary-container, #3a1e77);
+  --color-primary-fixed: var(--theme-primary-fixed, #e9ddff);
+  --color-primary-fixed-dim: var(--theme-primary-fixed-dim, #d0bcff);
+  --color-on-primary-fixed: #23005c;
+  --color-on-primary-fixed-variant: #4f368d;
+
+  --color-secondary: var(--theme-secondary, #685392);
+  --color-secondary-container: var(--theme-secondary-container, #d0b8fe);
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #5a4583;
+  --color-secondary-fixed: var(--theme-secondary-fixed, #ebddff);
+  --color-secondary-fixed-dim: #d3bbff;
+  --color-on-secondary-fixed: #230c4a;
+  --color-on-secondary-fixed-variant: #503b78;
+
+  --color-tertiary: #6b5a61;
+  --color-tertiary-container: #a9959d;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #3d2e35;
+  --color-tertiary-fixed: #f4dce5;
+  --color-tertiary-fixed-dim: #d7c1c9;
+  --color-on-tertiary-fixed: #25181e;
+  --color-on-tertiary-fixed-variant: #52424a;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--theme-bg, #fdf9f5);
+    color: #1c1c19;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+  }
+  
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 12px);
+  }
+  
+  .px-margin {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* Material Symbols Outlined font styling helper */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+/* Hide scrollbar for clean carousel feel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
